@@ -3,33 +3,15 @@ package com.golfapp.trenerstvo.dto;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
-public class TerminDto {
+public class TerminCreateDto {
 
-    private UUID id;
     private UUID trenerId;
     private UUID clanId;
     private LocalDateTime zacetek;
     private LocalDateTime konec;
     private String opombe;
 
-    public TerminDto() {}
-
-    public TerminDto(UUID id, UUID trenerId, UUID clanId, LocalDateTime zacetek, LocalDateTime konec, String opombe) {
-        this.id = id;
-        this.trenerId = trenerId;
-        this.clanId = clanId;
-        this.zacetek = zacetek;
-        this.konec = konec;
-        this.opombe = opombe;
-    }
-
-    public UUID getId() { 
-        return id; 
-    }
-
-    public void setId(UUID id) { 
-        this.id = id; 
-    }
+    public TerminCreateDto() {}
 
     public UUID getTrenerId() { 
         return trenerId; 

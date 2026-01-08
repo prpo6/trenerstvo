@@ -13,8 +13,14 @@ public interface TerminRepository extends JpaRepository<Termin, UUID> {
 
     List<Termin> findByClanId(UUID clanId);
 
-    // za prekrivanje, ce: existing.zacetek < newKonec AND existing.konec > newZacetek
+    // dve funkciji za prekrivanje; ce: existing.zacetek < newKonec AND existing.konec > newZacetek
     List<Termin> findByTrener_IdAndZacetekLessThanAndKonecGreaterThan(
+            UUID trenerId,
+            LocalDateTime konec,
+            LocalDateTime zacetek
+    );
+
+    boolean existsByTrener_IdAndZacetekLessThanAndKonecGreaterThan(
             UUID trenerId,
             LocalDateTime konec,
             LocalDateTime zacetek
