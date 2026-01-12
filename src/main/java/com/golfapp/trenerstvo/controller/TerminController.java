@@ -11,7 +11,8 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/termini")
+@RequestMapping("/api/termini")
+@CrossOrigin(origins = "*")
 public class TerminController {
 
     private final TerminService terminService;

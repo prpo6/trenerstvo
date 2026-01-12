@@ -9,7 +9,8 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/trenerji")
+@RequestMapping("/api/trenerji")
+@CrossOrigin(origins = "*")
 public class TrenerController {
 
     private final TrenerService trenerService;
